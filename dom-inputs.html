@@ -15,13 +15,25 @@
         div#res {
             margin-top: 20px;
         }
-    </style>
+        </style>
 </head>
 <body>
     <h1>Somando valores</h1>
     <input type="number" name="n1" id="n1">
     <input type="number" name="n2" id="n2">
-    <input type="button" value="Somar">
+    <input type="button" value="Somar" onclick="somar()">
     <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            var tn1 = document.getElementById("n1")
+            var tn2 = document.querySelector("input#n2")
+            var res = document.getElementById("res")
+
+            var valor1 = Number(tn1.value)
+            var valor2 = Number(tn2.value)
+            var s = valor1 + valor2
+            res.innerHTML = `A soma entre ${valor1} e ${valor2} igual a ${s}`
+        }
+    </script>
 </body>
 </html>
